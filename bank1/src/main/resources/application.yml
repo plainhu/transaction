@@ -1,0 +1,8 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: bank1
+feign:
+  sentinel:
+    enabled: true
