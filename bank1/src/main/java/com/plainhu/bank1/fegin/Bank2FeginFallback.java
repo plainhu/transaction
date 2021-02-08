@@ -1,5 +1,6 @@
 package com.plainhu.bank1.fegin;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,10 +8,10 @@ import org.springframework.stereotype.Service;
  * @author: hkt
  * @desc:
  */
-@Service
+@Component
 public class Bank2FeginFallback implements Bank2Fegin {
     @Override
-    public String charge(String str) {
-        return null;
+    public String charge(int amount) {
+        return "充值bank2失败！";
     }
 }

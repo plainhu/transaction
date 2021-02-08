@@ -1,6 +1,7 @@
 package com.plainhu.bank1.rest;
 
 import com.plainhu.bank1.service.MoneyService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,17 @@ public class MoneyController {
     private MoneyService moneyService;
 
     @GetMapping("tobank2")
-    public String transfer() {
+    public String transfer() throws Exception {
         return moneyService.transfer(100);
+    }
+
+    @GetMapping("charge")
+    public String charge(int amount) {
+        return moneyService.charge(amount);
+    }
+
+    @GetMapping("query")
+    public String query() {
+        return moneyService.query("张三");
     }
 }

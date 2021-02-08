@@ -6,5 +6,9 @@ package com.plainhu.bank1.service;
  * @desc:
  */
 public interface MoneyService {
-    String transfer(int i);
+    String transfer(int i) throws Exception;
+
+    String query(String name);
+
+    String charge(int amount);
 }

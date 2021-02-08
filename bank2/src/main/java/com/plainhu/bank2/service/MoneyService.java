@@ -7,4 +7,8 @@ package com.plainhu.bank2.service;
  */
 public interface MoneyService {
     String transfer(int i);
+
+    String query(String name);
+
+    String charge(int amount);
 }
