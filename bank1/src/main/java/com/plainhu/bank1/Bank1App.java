@@ -1,5 +1,6 @@
 package com.plainhu.bank1;
 
+import io.seata.spring.annotation.datasource.EnableAutoDataSourceProxy;
 import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.annotation.MapperScans;
 import org.springframework.boot.SpringApplication;

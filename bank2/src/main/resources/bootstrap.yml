@@ -16,7 +16,7 @@ feign:
 seata:
   enabled: true
   tx-service-group: my_test_tx_group    #此处配置自定义的seata事务分组名称,config.txt中service.vgroupMapping.spring-cloud-demo=default有对应关系
-  enable-auto-data-source-proxy: true    #开启数据库代理
+#  enable-auto-data-source-proxy: true    #开启数据库代理
   config:
     type: nacos
     nacos:
